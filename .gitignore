@@ -1,0 +1,13 @@
+# Ignoră directorul mediului virtual
+.venv/
+
+# Ignoră fișierele generate de PyCharm
+.idea/
+
+# Ignoră fișierele compilate Python
+*.pyc
+__pycache__/
+
+# Ignoră alte fișiere temporare
+*.log
+*.sqlite3
