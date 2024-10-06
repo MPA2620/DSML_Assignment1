@@ -1,12 +1,8 @@
 # DSML_Assignment1
 First Assignment in DSML Courses
-
-
-Here’s an overview of the exercise, the implementation, and the thought process behind how we approached each task, which you can add as a file to your project:
-
 ---
 
-## Gradient Descent Exercise - Explanation and Implementation
+## Gradient Descent Exercise 1 - Explanation and Implementation
 
 ### Overview
 The purpose of this exercise is to implement and explore gradient descent in 1D to minimize a quadratic function, analyze the effect of learning rates, starting points, and perform stability analysis around the minimum.
@@ -14,9 +10,9 @@ The purpose of this exercise is to implement and explore gradient descent in 1D 
 ### Function:
 The function given is:
 
-\[
-f(x) = x^2 + 3x + 2
-\]
+
+      f(x) = x^2 + 3x + 2
+
 
 It's a simple quadratic function with a minimum that can be found analytically as well as using gradient descent. The goal is to perform gradient descent to minimize this function and investigate how the parameters like learning rate and initial points affect the behavior of the algorithm.
 
@@ -25,11 +21,11 @@ It's a simple quadratic function with a minimum that can be found analytically a
 ### **Task 1: Gradient Descent for Minimization**
 
 #### Goal:
-Perform gradient descent with a learning rate of \( \eta = 0.1 \) starting from \( x_0 = 10 \) and iterating until the gradient's absolute value is less than \( 10^{-6} \).
+Perform gradient descent with a learning rate of (eta = 0.1) starting from (x_0 = 10) and iterating until the gradient's absolute value is less than (10^{-6}).
 
 #### Thought Process:
-1. We defined the function \( f(x) \) and its derivative \( f'(x) = 2x + 3 \), which is needed for gradient descent.
-2. The gradient descent loop was set to update \( x \) iteratively
+1. We defined the function f(x) and its derivative (f'(x) = 2x + 3), which is needed for gradient descent.
+2. The gradient descent loop was set to update x iteratively
    until convergence is reached (when the gradient is small).
 3. We plotted the path of the descent to visually observe the approach to the minimum.
 
@@ -78,3 +74,63 @@ Perform a basic stability analysis by examining the behavior of gradient descent
 - **Learning Rate Sensitivity**: Large learning rates can lead to divergence, while small rates ensure convergence but may be slow.
 - **Initial Conditions**: The choice of initial points significantly affects the number of iterations needed to reach the minimum.
 - **Stability**: Near the critical point, small perturbations are corrected by the gradient descent, demonstrating its stability when close to the minimum.
+
+
+Here’s a detailed explanation of **Exercise 2: Gradient Descent in 2D**, covering the tasks, implementation process, and the thought process behind each solution. This can be used as a documentation file to accompany your code.
+
+---
+
+## Gradient Descent in 2D - Explanation and Thought Process
+
+### Overview
+This exercise involves minimizing a **2D quadratic function** using gradient descent and analyzing the effects of learning rates, starting points, and stability near the critical point. Gradient descent is a fundamental optimization algorithm used extensively in machine learning for minimizing cost functions.
+
+The function to minimize is:
+
+      f(x_1, x_2) = x_1^2 + x_2^2 + 3x_1 + 4x_2 + 5
+
+This gradient is used to iteratively update the values of (x_1) and (x_2) in gradient descent.
+
+---
+
+### **Task 1: Implement Gradient Descent**
+
+#### Goal:
+- Write a Python function to perform gradient descent on the 2D function.
+- Set the learning rate (eta = 0.1) and start at the initial point (5, 5).
+- Plot the path of gradient descent on the contour plot of the function.
+
+### **Task 2: Effect of Different Learning Rates**
+
+#### Goal:
+- Investigate the effect of different learning rates (eta = 0.1, 0.5, 1.0) on the behavior of gradient descent.
+- Plot the paths for each learning rate on the contour plot and compare their behavior.
+
+#### Thought Process:
+1. **Learning Rates**:
+   - **Small Learning Rate** (eta = 0.1): This leads to slow convergence but steady, accurate results.
+   - **Medium Learning Rate** (eta = 0.5): This should speed up convergence but may result in slight overshooting.
+   - **Large Learning Rate** (eta = 1.0): A larger learning rate may cause the algorithm to overshoot the minimum or even diverge.
+2. **Path Comparison**: By running gradient descent for each learning rate and plotting the paths, we were able to observe how the learning rates affected the speed and accuracy of convergence.
+3. **Conclusion**: The smaller learning rates converged steadily, while the larger learning rate (eta = 1.0) may result in overshooting and instability.
+
+---
+
+### **Task 3: Effect of Different Starting Points**
+
+#### Goal:
+- Explore the effect of different initial points on gradient descent.
+- Use starting points (5, 5), (-5, 5), and (-5, -5), and compare the paths taken to the minimum.
+
+#### Thought Process:
+1. **Initial Points**: We selected three different starting points to understand how the location of the initial point affects the convergence path and speed. The further from the minimum, the longer the algorithm might take to converge.
+2. **Path Comparison**: Each starting point leads to a different path, but all paths should converge to the same minimum. The path lengths and directions, however, vary depending on how far the initial point is from the minimum.
+3. **Conclusion**: The starting point significantly influences the number of iterations and the path taken, but all points eventually converge to the same minimum.
+
+---
+
+### **Task 4: Stability Analysis**
+
+#### Goal:
+- Perform a basic stability analysis by solving and analyzing the stability of the critical point.
+- Introduce small perturbations around the minimum and observe the behavior of gradient descent near this point.
