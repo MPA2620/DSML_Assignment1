@@ -134,3 +134,47 @@ This gradient is used to iteratively update the values of (x_1) and (x_2) in gra
 #### Goal:
 - Perform a basic stability analysis by solving and analyzing the stability of the critical point.
 - Introduce small perturbations around the minimum and observe the behavior of gradient descent near this point.
+
+---
+
+## Gradient Descent Exercise 3 - Explanation and Implementation
+
+This project implements linear regression models using the Gradient Descent optimization algorithm in Python. The code is structured to handle both **single-variable linear regression** and **multiple-variable linear regression**. The project also includes data visualization for regression lines and 3D surfaces.
+
+---
+
+# Project Structure
+
+The project consists of the following main components:
+
+1. **Helper Functions**:
+    - `mse(y_true, y_pred)`: Calculates the Mean Squared Error (MSE) between actual and predicted values.
+
+2. **Gradient Descent Implementations**:
+    - `linear_regression_1d(X, Y, learning_rate, tolerance, max_iter=1000)`: Implements single-variable linear regression using Gradient Descent.
+    - `linear_regression_2d(X1, X2, Y, learning_rate, tolerance, max_iter=1000)`: Implements multiple-variable linear regression using Gradient Descent.
+
+3. **Visualization Functions**:
+    - `plot_1d_regression(X, Y, w, b, title)`: Plots the fitted line and data points for single-variable linear regression.
+    - `plot_2d_regression(X1, X2, Y, w1, w2, b, title)`: Plots the 3D surface and data points for multiple-variable linear regression.
+
+4. **Main Functions for Task Execution**:
+    - `task1()`: Executes single-variable linear regression on a predefined dataset.
+    - `task2()`: Executes multiple-variable linear regression on a predefined dataset.
+
+5. **User Menu**:
+    - `main()`: Provides a simple menu to select which task to run.
+
+---
+
+## Requirements
+
+The project requires the following Python libraries:
+
+- `numpy`
+- `matplotlib`
+
+You can install the required libraries using the following command:
+
+```bash
+pip install numpy matplotlib
